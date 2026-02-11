@@ -10,7 +10,7 @@ const userRoutes = require('./routes/User');
 dotenv.config();
 
 // PORT run
- const PORT = process.env.PORT;
+ const PORT = process.env.PORT || 4000;
  
 // Express APP
  const app = express();
@@ -36,7 +36,7 @@ dotenv.config();
  .then(()=> {
   // listen for requests
  app.listen(PORT, () => {
-   console.log(`Server is up and listening on port http://localhost:${PORT} & connected to our db`);
+   console.log(`Server is running on port http://localhost:${PORT} & connected to DB`);
  });
  }).
  catch((error)=>{console.log(error)})
