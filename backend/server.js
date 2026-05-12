@@ -16,6 +16,15 @@ dotenv.config();
 // Express APP
  const app = express();
 
+ app.use(cors({
+    origin: [
+        "http://localhost:3000", 
+        "https://your-frontend-domain.vercel.app" // Apna Vercel link yahan daalein
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true
+}));
+
  // middleware
  app.use(cors());
  app.use(express.json());
