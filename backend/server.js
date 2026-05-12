@@ -19,7 +19,7 @@ dotenv.config();
  app.use(cors({
     origin: [
         "http://localhost:3000", 
-        "https://your-frontend-domain.vercel.app" // Apna Vercel link yahan daalein
+        "https://mern-project-workout-budddy.vercel.app" 
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true
